@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
-
+import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -30,6 +30,7 @@ export default function RootLayout({
         {/* <Image /> */}
         <Header />
         <main className="p-5">{children}</main>
+        <Analytics/>
         <Footer />
       </body>
     </html>
